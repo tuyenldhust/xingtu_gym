@@ -9,6 +9,7 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ''
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     ports:
       - "${MYSQL_HOST_PORT}:${MYSQL_PORT}"
@@ -28,6 +29,7 @@ services:
     restart: always
     environment:
       PMA_HOST: mysql_srv
+      MYSQL_ROOT_PASSWORD: ''
     ports:
       - ${PMA_HOST_PORT}:${PMA_PORT}
 
