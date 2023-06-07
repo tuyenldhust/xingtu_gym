@@ -1,5 +1,5 @@
 # How to deploy
-'''sh
+```sh
 git clone --recursive https://github.com/tuyenldhust/xingtu_gym.git
 cd xingtu_gym
 chmod +x install-docker.sh script.sh
@@ -19,4 +19,4 @@ chmod +x install-docker.sh script.sh
 
 # Clean all
 ./script.sh fclean
-'''
+```
