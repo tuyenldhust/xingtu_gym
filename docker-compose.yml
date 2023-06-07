@@ -16,6 +16,7 @@ services:
       - ./data:/var/lib/mysql
       - ./conf:/etc/mysql/conf.d
       - ./logs:/logs
+      - ./gym_db.sql:/docker-entrypoint-initdb.d/gym_db.sql
   #
   # phpmyadmin service
   #
