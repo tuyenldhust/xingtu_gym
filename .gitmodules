@@ -1,0 +1,6 @@
+[submodule "gym-backend"]
+	path = gym-backend
+	url = https://github.com/minhquan0509/gym-backend
+[submodule "gym-frontend"]
+	path = gym-frontend
+	url = https://github.com/minhquan0509/gym-frontend
