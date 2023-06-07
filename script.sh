@@ -15,7 +15,7 @@ elif [[ $1 == "start" ]]; then
     check
     docker-compose --env-file .env --file docker-compose.yml up -d
     # delete xingtu_gym database and create xingtu_gym database and import gym_db.sql
-    docker-compose exec -it mysql_srv mysql -uroot -p123456 -e "drop database if exists xingtu_gym; create database xingtu_gym; use xingtu_gym; source gym_db.sql;"
+    docker-compose exec -it mysql_srv mysql -u root -p123456 -e "drop database if exists gym_db; create database gym_db; use gym_db; source gym_db.sql;"
 elif [[ $1 == "stop" ]]; then
     check
     docker-compose --env-file .env --file docker-compose.yml down
