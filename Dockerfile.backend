@@ -7,13 +7,12 @@ WORKDIR /backend
 # Cache and install dependencies
 COPY gym-backend/package*.json .
 RUN npm install
-RUN npm ci --omit=dev
 
 # Copy app files
 COPY gym-backend .
 
 # Expose port
-EXPOSE 5000
+EXPOSE 3001
 
 # Start app
 CMD ["npm", "start"]
