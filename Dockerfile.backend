@@ -1,13 +1,13 @@
 # We are using latest node version
-FROM node:latest
+FROM node:16-alpine3.18
 
 # Add a work directory
-WORKDIR /backend
+WORKDIR /usr/src/app
 
 # Cache and install dependencies
-COPY gym-backend/package*.json .
-RUN npm install
-RUN npm ci --omit=dev
+COPY gym-backend/package.json .
+
+RUN npm i
 
 # Copy app files
 COPY gym-backend .
